@@ -1,0 +1,6 @@
+[submodule "hw0"]
+	path = hw0
+	url = git@github.com:dlsyscourse/hw0.git
+[submodule "lecture4"]
+	path = lecture4
+	url = git@github.com:dlsyscourse/lecture4
