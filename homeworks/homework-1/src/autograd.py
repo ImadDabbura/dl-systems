@@ -418,8 +418,9 @@ def compute_gradient_of_variables(output_tensor, out_grad):
             for input_node, partial_adjoint in zip(
                 out_tensor.inputs, partial_adjoints
             ):
-                node_to_output_grads_list.setdefault(input_node, [])
-                node_to_output_grads_list[input_node].append(partial_adjoint)
+                node_to_output_grads_list.setdefault(input_node, []).append(
+                    partial_adjoint
+                )
     ### END YOUR SOLUTION
 
 
