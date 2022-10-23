@@ -129,9 +129,9 @@ def nn_epoch(X, y, W1, W2, lr=0.1, batch=100):
     y_one_hot[np.arange(m), y] = 1
     for i in range(0, m, batch):
         X_batch = X[i : i + batch]
-        X_batch = ndl.Tensor(X_batch)
+        X_batch = ndl.Tensor(X_batch, requires_grad=False)
         y_batch = y_one_hot[i : i + batch]
-        y_batch = ndl.Tensor(y_batch)
+        y_batch = ndl.Tensor(y_batch, requires_grad=False)
         bs = y_batch.shape[0]
 
         Z = ndl.relu(X_batch @ W1) @ W2
